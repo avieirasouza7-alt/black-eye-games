@@ -1,4 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/contact";
 
 const navLinks = [
   { to: "/", label: "Início" },
@@ -57,10 +62,13 @@ export function SiteFooter() {
               Política de Privacidade
             </Link>
             <a
-              href="mailto:contato@blackeyegames.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-muted-foreground hover:text-foreground"
             >
-              contato@blackeyegames.com
+              {CONTACT_EMAIL}
+            </a>
+            <a href={CONTACT_PHONE_TEL} className="text-muted-foreground hover:text-foreground">
+              {CONTACT_PHONE_DISPLAY}
             </a>
           </nav>
         </div>

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
 
 /** Substitua pela URL real da listagem na Google Play quando publicar. */
 export const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.blackeyegames.illuminaticontrol";
@@ -80,8 +81,15 @@ function GamePage() {
 
       <p className="mt-6 text-xs text-muted-foreground">
         Dúvidas ou suporte:{" "}
-        <a href="mailto:contato@blackeyegames.com" className="text-foreground underline-offset-2 hover:underline">
-          contato@blackeyegames.com
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="text-foreground underline-offset-2 hover:underline"
+        >
+          {CONTACT_EMAIL}
+        </a>
+        {" · "}
+        <a href={CONTACT_PHONE_TEL} className="text-foreground underline-offset-2 hover:underline">
+          {CONTACT_PHONE_DISPLAY}
         </a>
       </p>
     </article>

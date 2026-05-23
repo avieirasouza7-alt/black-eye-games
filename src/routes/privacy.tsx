@@ -1,4 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/contact";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -53,10 +58,10 @@ function PrivacyPage() {
             <li>
               <strong className="text-foreground">Contato:</strong> se você nos enviar e-mail para{" "}
               <a
-                href="mailto:contato@blackeyegames.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="text-foreground underline-offset-2 hover:underline"
               >
-                contato@blackeyegames.com
+                {CONTACT_EMAIL}
               </a>
               , armazenamos o conteúdo da mensagem e seu endereço de e-mail para responder.
             </li>
@@ -138,10 +143,10 @@ function PrivacyPage() {
             Dependendo da sua região (por exemplo, LGPD no Brasil ou GDPR na UE), você pode solicitar
             acesso, correção, exclusão ou oposição ao tratamento de dados pessoais. Envie pedidos para{" "}
             <a
-              href="mailto:contato@blackeyegames.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-foreground underline-offset-2 hover:underline"
             >
-              contato@blackeyegames.com
+              {CONTACT_EMAIL}
             </a>
             . Responderemos em prazo razoável.
           </p>
@@ -162,10 +167,18 @@ function PrivacyPage() {
             <br />
             E-mail:{" "}
             <a
-              href="mailto:contato@blackeyegames.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-foreground underline-offset-2 hover:underline"
             >
-              contato@blackeyegames.com
+              {CONTACT_EMAIL}
+            </a>
+            <br />
+            Telefone:{" "}
+            <a
+              href={CONTACT_PHONE_TEL}
+              className="text-foreground underline-offset-2 hover:underline"
+            >
+              {CONTACT_PHONE_DISPLAY}
             </a>
           </p>
         </section>

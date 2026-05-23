@@ -74,4 +74,4 @@ public/
 
 ## Contato
 
-contato@blackeyegames.com
+avieirasouza7@gmail.com

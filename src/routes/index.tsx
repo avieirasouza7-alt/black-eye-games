@@ -1,4 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+} from "@/lib/contact";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,7 +44,7 @@ function HomePage() {
               Conhecer o jogo
             </Link>
             <a
-              href="mailto:contato@blackeyegames.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="inline-flex items-center justify-center rounded-xl border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
             >
               Fale conosco
@@ -92,12 +97,20 @@ function HomePage() {
           <p className="mt-2 text-muted-foreground">
             Parcerias, imprensa, suporte ou dúvidas sobre privacidade e anúncios.
           </p>
-          <a
-            href="mailto:contato@blackeyegames.com"
-            className="mt-4 inline-block text-lg font-medium text-primary underline-offset-2 hover:underline"
-          >
-            contato@blackeyegames.com
-          </a>
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:gap-6">
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-lg font-medium text-primary underline-offset-2 hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+            <a
+              href={CONTACT_PHONE_TEL}
+              className="text-lg font-medium text-primary underline-offset-2 hover:underline"
+            >
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+          </div>
         </div>
       </section>
     </>
