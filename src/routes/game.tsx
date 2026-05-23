@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/contact";
+import { STUDIO_NAME } from "@/lib/site";
 
 /** Substitua pela URL real da listagem na Google Play quando publicar. */
 export const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.blackeyegames.illuminaticontrol";
@@ -7,11 +8,10 @@ export const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=co
 export const Route = createFileRoute("/game")({
   head: () => ({
     meta: [
-      { title: "Illuminati Control Game | Black Eye Games" },
+      { title: `Illuminati Control Game | ${STUDIO_NAME}` },
       {
         name: "description",
-        content:
-          "Illuminati Control Game — jogo mobile de estratégia e arcade da Black Eye Games.",
+        content: `Illuminati Control Game — jogo mobile de estratégia e arcade da ${STUDIO_NAME}.`,
       },
     ],
   }),
@@ -56,7 +56,7 @@ function GamePage() {
             <span className="text-primary" aria-hidden>
               •
             </span>
-            Desenvolvido por Black Eye Games
+            Desenvolvido por {STUDIO_NAME}
           </li>
         </ul>
       </section>

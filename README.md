@@ -1,6 +1,6 @@
-# Black Eye Games — Site oficial
+# Crimson Blink Games — Site oficial
 
-Site **100% estático** do estúdio **Black Eye Games**, pronto para Google Play Console e validação AdMob (Vercel, Netlify ou qualquer host de arquivos estáticos).
+Site **100% estático** do estúdio **Crimson Blink Games**, pronto para Google Play Console e validação AdMob (Vercel, Netlify ou qualquer host de arquivos estáticos).
 
 ## URLs após o deploy
 

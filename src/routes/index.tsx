@@ -4,15 +4,15 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_TEL,
 } from "@/lib/contact";
+import { STUDIO_NAME } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Black Eye Games | Indie Game Studio" },
+      { title: `${STUDIO_NAME} | Indie Game Studio` },
       {
         name: "description",
-        content:
-          "Black Eye Games — estúdio indie focado em jogos mobile. Conheça Illuminati Control Game.",
+        content: `${STUDIO_NAME} — estúdio indie focado em jogos mobile. Conheça Illuminati Control Game.`,
       },
     ],
   }),
@@ -30,7 +30,7 @@ function HomePage() {
         <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
           <p className="text-sm font-medium uppercase tracking-wider text-primary">Indie Game Studio</p>
           <h1 className="mt-3 max-w-2xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Black Eye Games
+            {STUDIO_NAME}
           </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Estúdio independente focado em jogos mobile — experiências rápidas, viciantes e feitas para

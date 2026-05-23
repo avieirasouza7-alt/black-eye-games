@@ -9,11 +9,10 @@ import {
 } from "@tanstack/react-router";
 
 import { SiteLayout } from "@/components/site/Layout";
+import { STUDIO_NAME } from "@/lib/site";
 import appCss from "../styles.css?url";
 
-const SITE_NAME = "Black Eye Games";
-const SITE_DESCRIPTION =
-  "Black Eye Games — estúdio indie de jogos mobile. Illuminati Control Game na Google Play.";
+const SITE_DESCRIPTION = `${STUDIO_NAME} — estúdio indie de jogos mobile. Illuminati Control Game na Google Play.`;
 
 function NotFoundComponent() {
   return (
@@ -77,10 +76,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: SITE_NAME },
+      { title: STUDIO_NAME },
       { name: "description", content: SITE_DESCRIPTION },
-      { name: "author", content: SITE_NAME },
-      { property: "og:title", content: SITE_NAME },
+      { name: "author", content: STUDIO_NAME },
+      { property: "og:title", content: STUDIO_NAME },
       { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

@@ -4,6 +4,7 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_TEL,
 } from "@/lib/contact";
+import { STUDIO_NAME, STUDIO_SHORT } from "@/lib/site";
 
 const navLinks = [
   { to: "/", label: "Início" },
@@ -20,10 +21,10 @@ export function SiteHeader() {
             className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground shadow-sm"
             aria-hidden
           >
-            BE
+            {STUDIO_SHORT}
           </span>
           <span className="text-sm font-semibold tracking-tight text-foreground group-hover:text-primary sm:text-base">
-            Black Eye Games
+            {STUDIO_NAME}
           </span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-2" aria-label="Principal">
@@ -51,7 +52,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="font-semibold text-foreground">Black Eye Games</p>
+            <p className="font-semibold text-foreground">{STUDIO_NAME}</p>
             <p className="mt-1 text-sm text-muted-foreground">Indie Game Studio · Jogos mobile</p>
           </div>
           <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm" aria-label="Rodapé">
@@ -73,7 +74,7 @@ export function SiteFooter() {
           </nav>
         </div>
         <p className="mt-8 text-center text-xs text-muted-foreground sm:text-left">
-          © {year} Black Eye Games. Todos os direitos reservados.
+          © {year} {STUDIO_NAME}. Todos os direitos reservados.
         </p>
       </div>
     </footer>

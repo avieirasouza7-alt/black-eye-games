@@ -1,7 +1,7 @@
 /** Nome do estúdio exibido no site e na política de privacidade. */
-export const STUDIO_NAME = "Black Eye Games";
+export const STUDIO_NAME = "Crimson Blink Games";
 
-export const STUDIO_SHORT = "BE";
+export const STUDIO_SHORT = "CB";
 
 /** URL pública do site (usada na Play Store e na política). */
 export const SITE_URL = "https://black-eye-games.vercel.app";
@@ -12,4 +12,4 @@ export const PRIVACY_PATH = "/privacy/";
 
 export const PRIVACY_URL = `${SITE_URL}${PRIVACY_PATH}`;
 
-export const PRIVACY_UPDATED = "23 de maio de 2026";
+export const PRIVACY_UPDATED = "24 de maio de 2026";
