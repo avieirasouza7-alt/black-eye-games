@@ -4,9 +4,11 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "start": "npx --yes serve public -l 3000",
     "dev": "npx --yes serve public -l 3000",
     "dev:react": "vite dev",
     "build": "node scripts/prepare-dist.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "build:react": "vite build",
     "preview": "npx --yes serve dist -l 4173",
     "lint": "eslint .",

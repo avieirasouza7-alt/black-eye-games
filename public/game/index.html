@@ -8,8 +8,15 @@
       name="description"
       content="Illuminati Control Game — jogo mobile de estratégia e arcade da Crimson Blink Games."
     />
-    <meta name="theme-color" content="#0c0e14" />
+    <meta property="og:image" content="/images/illuminati-control-cover.webp" />
+    <meta name="theme-color" content="#060a10" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="/css/site.css" />
   </head>
   <body>
@@ -17,8 +24,14 @@
       <header class="site-header">
         <div class="container header-inner">
           <a class="brand" href="/">
-            <span class="brand-mark" aria-hidden="true">CB</span>
-            Crimson Blink Games
+            <img
+              class="brand-logo"
+              src="/images/logo-mark.webp"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span class="brand-text">Crimson Blink Games</span>
           </a>
           <nav class="nav" aria-label="Principal">
             <a href="/">Início</a>
@@ -29,7 +42,7 @@
       </header>
 
       <main>
-        <article class="article container">
+        <article class="article container game-page">
           <p class="eyebrow">Jogo mobile</p>
           <h1>Illuminati Control Game</h1>
           <p class="lead">
@@ -37,6 +50,27 @@
             em partidas curtas, ideais para jogar no celular — expanda influência, desbloqueie upgrades e
             supere desafios progressivos.
           </p>
+
+          <div class="game-media">
+            <figure class="game-showcase">
+              <img
+                src="/images/illuminati-control-cover.webp"
+                alt="Capa de Illuminati Control Game — rede neon e atmosfera sci-fi"
+                width="960"
+                height="540"
+              />
+            </figure>
+            <figure class="game-screens">
+              <img
+                src="/images/illuminati-control-screens.webp"
+                alt="Telas do jogo: mapa de rede, upgrades e ação arcade"
+                width="1200"
+                height="400"
+                loading="lazy"
+              />
+              <figcaption>Prévia visual do gameplay (ilustração promocional)</figcaption>
+            </figure>
+          </div>
 
           <section class="panel">
             <h2>Recursos</h2>
@@ -78,10 +112,8 @@
         <div class="container footer-inner">
           <div class="footer-grid">
             <div>
-              <p style="margin: 0; font-weight: 600">Crimson Blink Games</p>
-              <p style="margin: 0.25rem 0 0; font-size: 0.875rem; color: #9aa3b5">
-                Indie Game Studio · Jogos mobile
-              </p>
+              <p class="footer-brand">Crimson Blink Games</p>
+              <p class="footer-tagline">Indie Game Studio · Vários gêneros · Mobile</p>
             </div>
             <nav class="footer-links" aria-label="Rodapé">
               <a href="/game/" aria-current="page">Illuminati Control Game</a>
