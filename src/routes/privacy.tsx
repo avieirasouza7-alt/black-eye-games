@@ -4,15 +4,15 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_TEL,
 } from "@/lib/contact";
+import { PRIVACY_UPDATED, SITE_HOST, STUDIO_NAME } from "@/lib/site";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade | Black Eye Games" },
+      { title: `Política de Privacidade | ${STUDIO_NAME}` },
       {
         name: "description",
-        content:
-          "Política de Privacidade da Black Eye Games — coleta de dados, AdMob e uso dos aplicativos mobile.",
+        content: `Política de Privacidade da ${STUDIO_NAME} — coleta de dados, AdMob e uso dos aplicativos mobile.`,
       },
     ],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/privacy")({
 });
 
 function PrivacyPage() {
-  const updated = "21 de maio de 2026";
+  const updated = PRIVACY_UPDATED;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
@@ -31,10 +31,10 @@ function PrivacyPage() {
         <section>
           <h2 className="text-lg font-semibold text-foreground">1. Introdução</h2>
           <p className="mt-3">
-            A <strong className="text-foreground">Black Eye Games</strong> (“nós”, “nosso”) respeita sua
+            A <strong className="text-foreground">{STUDIO_NAME}</strong> (“nós”, “nosso”) respeita sua
             privacidade. Esta Política de Privacidade descreve como tratamos informações quando você usa
-            nosso site (<strong className="text-foreground">blackeyegames.com</strong> ou domínios
-            associados) e nossos aplicativos mobile, incluindo{" "}
+            nosso site (<strong className="text-foreground">{SITE_HOST}</strong> ou domínios associados) e
+            nossos aplicativos mobile, incluindo{" "}
             <strong className="text-foreground">Illuminati Control Game</strong>, disponíveis na Google
             Play.
           </p>
@@ -163,7 +163,7 @@ function PrivacyPage() {
         <section>
           <h2 className="text-lg font-semibold text-foreground">10. Contato</h2>
           <p className="mt-3">
-            <strong className="text-foreground">Black Eye Games</strong>
+            <strong className="text-foreground">{STUDIO_NAME}</strong>
             <br />
             E-mail:{" "}
             <a
