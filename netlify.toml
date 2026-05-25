@@ -1,6 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "node scripts/prepare-dist.mjs"
   publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NETLIFY_INSTALL_JS_DEPENDENCIES = "false"
 
 [[headers]]
   for = "/app-ads.txt"
