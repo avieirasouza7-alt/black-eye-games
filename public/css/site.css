@@ -556,9 +556,9 @@ h2 {
 .card-cover {
   width: 100%;
   height: 100%;
-  min-height: 14rem;
+  min-height: 16rem;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: top center;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -769,27 +769,53 @@ h2 {
 
 .game-showcase img {
   width: 100%;
+  max-width: 22rem;
+  height: auto;
+  margin-inline: auto;
+  display: block;
+}
+
+.screens-title {
+  margin: 2.5rem 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.screens-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .screens-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+.screens-gallery figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--bg-deep);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.screens-gallery img {
+  width: 100%;
   height: auto;
   display: block;
   vertical-align: middle;
 }
 
-.game-screens {
-  margin: 1.25rem 0 0;
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  overflow: hidden;
-  background: var(--bg-raised);
-}
-
-.game-screens img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.game-media figcaption {
-  margin-top: 0.5rem;
+.screens-note {
+  margin: 1rem 0 0;
   font-size: 0.8125rem;
   color: var(--text-muted);
   text-align: center;
