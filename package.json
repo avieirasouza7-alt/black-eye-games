@@ -10,6 +10,7 @@
     "build": "node scripts/prepare-dist.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "optimize-screenshots": "node scripts/optimize-screenshots.mjs",
+    "optimize-torre-flux": "node scripts/optimize-torre-flux.mjs",
     "build:react": "vite build",
     "preview": "npx --yes serve dist -l 4173",
     "lint": "eslint .",

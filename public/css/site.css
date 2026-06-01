@@ -821,6 +821,77 @@ h2 {
   text-align: center;
 }
 
+/* —— Multi-game home —— */
+
+.games-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .games-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .games-grid .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .games-grid .card-visual {
+    min-height: 14rem;
+  }
+}
+
+.card--launch {
+  box-shadow:
+    var(--shadow-accent),
+    0 0 48px rgba(155, 28, 46, 0.2),
+    0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--crimson), #6b1030);
+  box-shadow: 0 4px 12px var(--crimson-glow);
+}
+
+.eyebrow--launch {
+  border-color: rgba(155, 28, 46, 0.45);
+  color: #f0a0b0;
+  background: rgba(155, 28, 46, 0.12);
+}
+
+.game-page--flux h1 {
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 45%, var(--accent-bright) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 70%;
+  }
+
+  .nav a {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
 .panel {
   margin-top: 2.5rem;
   padding: 1.75rem;
