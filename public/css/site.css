@@ -843,6 +843,12 @@ h2 {
   }
 }
 
+@media (min-width: 1100px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .card--launch {
   box-shadow:
     var(--shadow-accent),
